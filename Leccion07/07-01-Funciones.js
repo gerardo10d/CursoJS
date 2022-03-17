@@ -37,8 +37,8 @@ console.log(factorial_recursivo(5));
 //Declaración de función tipo anónima
 let sumar = function(a, b){return a + b};
 
-resultado = sumar(1, 2);
-console.log(resultado);
+let resultado2 = sumar(1, 2);
+console.log(resultado2);
 
 // Funciones de tipo self-invoking----------------------
 // No se pueden reutilizar, solo se llama una vez
@@ -52,8 +52,8 @@ console.log(resultado);
 // No requiere la palabra function ni return
 // Se usa const para definir el espacio donde se almacena
 const sumarFuncionTipoFlecha = (a, b) => a + b;
-resultado = sumarFuncionTipoFlecha(3, 5);
-console.log(resultado);
+let resultado3 = sumarFuncionTipoFlecha(3, 5);
+console.log(resultado3);
 
 // Parámetros y argumentos de una función
 /*
@@ -70,5 +70,19 @@ let sumarP = function(a = 4, b = 5){
     return a + b + arguments[2];
 };
 
-resultado = sumarP(3, 6, 7);
+let resultado4 = sumarP(3, 6, 7);
+console.log(resultado4);
+
+
+// Ejemplo de sumar todos los argumentos
+let resultado = sumarTodo(1, 2, 3, 4, 5);
+
 console.log(resultado);
+
+function sumarTodo(){
+    let suma = 0;
+    for(let i = 0; i < arguments.length; i++){
+        suma += arguments[i];
+    }
+    return suma;
+}
